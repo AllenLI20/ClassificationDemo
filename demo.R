@@ -33,4 +33,7 @@ hist(frame$y)
 
 
 ################classification#################
-
+source('gmm_clust1d.R')
+clust_result <- gmm_clust1d(data = frame$y,k = 3,mu = c(-5,0,5),sigma2 = c(1,1,1),PI = c(1,1,1)/3,N = 20)
+tab <- table(frame$group,clust_result$clust.pred)
+TPM <- 1-sum(diag(tab))/sum(tab)
