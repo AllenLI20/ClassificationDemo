@@ -1,9 +1,10 @@
 
-#######################参数说明############################
-## inputs: data, k(# of clusters), prior.mu,             ##
-##         prior.Sigma, prior.PI, iter                   ##
-## outputs: post.mu, post.Sigma, post.PI, maxind, maxv   ##
-###########################################################
+#####################参数说明########################
+## inputs: data, k(# of clusters), prior.mu,      ##
+##         prior.sigma2, prior.PI, iter           ##
+## outputs: post.mu, post.sigma2, post.PI,        ##
+##         clust.pred, posterior                  ##
+####################################################
 
 gmm_clust1d <- function(data,k,mu,sigma2,PI,N){
   
